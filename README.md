@@ -516,11 +516,13 @@ Scroll down below the Call operation button. You should see a **200 OK** and a *
 
 
 It is now time to test our API from the command line.
-From the previous cURL screen, Copy the cURL example from the left side into your text editor window replacing REPLACE_WITH_CLIENT_ID and REPLACE_WITH_CLIENT_SECRET with your client id and your client secret saved from the prior step
+From the previous cURL screen, copy the cURL example from the left side into your text editor window replacing REPLACE_WITH_CLIENT_ID and REPLACE_WITH_CLIENT_SECRET with your client id and your client secret saved from the prior step.
+
+Or copy the link below and replacing REPLACE_WITH_USER_ID with your user id (that is your login email without the `@` and `.` . For example `philmetal@mail.com` user id is `philmetalmailcom`), and replacing REPLACE_WITH_CLIENT_ID and REPLACE_WITH_CLIENT_SECRET with your client id and your client secret. 
 
 ```
 curl --request GET \
-  --url 'https://api.eu.apiconnect.ibmcloud.com/philmetalmailcom-dev/sb/loanmgt/resources/loans/v1/extQuote?loanAmount=10000&annualInterestRate=1.1&termInMonths=36&delay=10&msgLength=725' \
+  --url 'https://api.eu.apiconnect.ibmcloud.com/REPLACE_WITH_USER_ID-dev/sb/loanmgt/resources/loans/v1/extQuote?loanAmount=10000&annualInterestRate=1.1&termInMonths=36&delay=10&msgLength=725' \
   --header 'accept: application/json' \
   --header 'x-ibm-client-id: REPLACE_WITH_CLIENT_ID' \
   --header 'x-ibm-client-secret: REPLACE_WITH_CLIENT_SECRET'
